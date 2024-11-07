@@ -38,10 +38,17 @@ section ul {
   justify-content: center;
 }
 
+/* imgに100vwを設定しないために新たにliの幅を設定 */
+section li {
+  width: 33%;
+}
+
 section img {
   height: 500px;
   /* 100vwで画像3つで画面幅を全て埋める */
-  width: 100vw;
+  /* このやり方だと改行有り設定になった場合に全部縦積みになるんであんまり美しくないんで修正 */
+  /* width: 100vw; */
+  width: 100%;
 
   /* アスペクト比を維持しながら表示。はみ出た分は切り取り */
   object-fit: cover;
@@ -50,6 +57,29 @@ section img {
   object-position: center;
 
 }
+
+/* 野崎式 レスポンシブ*/
+/* @media screen and (max-width:834px) {
+  section ul {
+    flex-flow: column;
+  }
+
+  section li {
+    width: 100%;
+  }
+} */
+
+/* 福留式レスポンシブ */
+@media screen and (max-width:834px) {
+  section ul {
+    flex-flow: column;
+  }
+
+  section li {
+    width: 100vw;
+  }
+}
+
 
 .top {
   text-align: center;

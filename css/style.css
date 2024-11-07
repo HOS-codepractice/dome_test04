@@ -1,9 +1,9 @@
 /* おまじない */
 @charset "UTF-8";
 
-/* notosans適用*/
+/* 書式適用　フォント名にスペースがある場合は""推奨*/
 body {
-  font-family: Helvetica Neue, Arial, Hiragino Sans, Meiryo, sans-serif;
+  font-family: "Helvetica Neue", Arial, "Hiragino Sans", Meiryo, sans-serif;
 }
 
 
@@ -145,6 +145,7 @@ footer {
 }
 
 /* レシピ一覧をホバーしたら無限に回す */
+/* これレスポンシブ設定だと動かないやんけ！ */
 .top a:hover {
   animation: rotate360 1s infinite linear;
   transition: transform 1s;
